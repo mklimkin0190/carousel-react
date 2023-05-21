@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import _ from 'lodash'
 import './index.css'
-import Carousel from './Carousel'
+import Carousel from './App'
 import reportWebVitals from './reportWebVitals'
 
 const renderItems = () =>

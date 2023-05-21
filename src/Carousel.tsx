@@ -12,12 +12,11 @@ const Arrow = styled.div`
   cursor: pointer;
 `
 
-const Viewport = styled.div<{ height: number }>`
+const Viewport = styled.div`
   width: calc(100% - 60px);
   position: relative;
   white-space: nowrap;
   overflow: auto;
-  height: ${({ height }) => `${height}px;`}
 `
 
 const Film = styled.div<{ padding: number, shift: number }>`
@@ -33,7 +32,7 @@ const Item = styled.div<{ margin: number, width: number | null }>`
   width: ${({ width }) => width ? `${width}px` : 'default'};
 `
 
-const App: React.FC<{ items: ReactNode[], margin: number }> = ({ items, margin }) => {
+const Carousel: React.FC<{ items: ReactNode[], margin: number }> = ({ items, margin }) => {
   const [itemWidth, setItemWidth] = useState<number | null>(null)
   const [initialItemWidth, setInitialItemWidth] = useState<number | null>(null)
   const [viewportWidth, setViewportWidth] = useState<number | null>(null)
@@ -91,7 +90,7 @@ const App: React.FC<{ items: ReactNode[], margin: number }> = ({ items, margin }
   return (
     <Container>
       <Arrow onClick={() => shift(-1)}>{'<'}</Arrow>
-      <Viewport height={30} ref={viewportRef}>
+      <Viewport ref={viewportRef}>
         <Film padding={margin} ref={filmRef} shift={firstPosition * (margin + (itemWidth || 0))}>
           {_.map(items,
             (item: ReactNode) =>
@@ -111,5 +110,5 @@ const App: React.FC<{ items: ReactNode[], margin: number }> = ({ items, margin }
 }
 
 
-export default App
+export default Carousel
 

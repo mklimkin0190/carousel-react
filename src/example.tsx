@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 )
 root.render(
   <React.StrictMode>
-    <Carousel items={renderItems()} margin={8} />
+    <Carousel items={renderItems()} margin={8}/>
   </React.StrictMode>
 )
 
