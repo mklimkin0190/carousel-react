@@ -1,3 +1,8 @@
+// TODO: recalculate on resize
+// TODO: add option to shift by pages
+// TODO: add readme
+// TODO: publish
+
 import React, {
   ReactNode,
   useState,
