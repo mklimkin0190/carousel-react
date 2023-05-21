@@ -10,9 +10,11 @@
     "@types/node": "^16.18.31",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.1.26",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -41,6 +43,8 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.194",
+    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
     "eslint": "^8.41.0",
